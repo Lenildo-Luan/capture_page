@@ -1,0 +1,166 @@
+:root {
+    --primary: #fe6e00;
+    --primary-light: #ff9a42;
+    --primary-verylight: #ffbc82;
+    --white: #ffffff;
+    --black: #060606;
+    --gray: #161616;
+    --gray-light: #262626;
+    --gray-verylight: #464646;
+    font-family: 'Barlow', sans-serif;
+}
+
+body {
+    background-color: var(--black);
+}
+
+.title {
+    color: var(--primary);
+    font-size: 81px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 97px;
+    width: 600px;
+}
+
+.text {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 22px;
+    margin-bottom: 30px;
+    width: 500px;
+}
+
+.container {
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 5vw;
+}
+
+.mainImage {
+    position: absolute;
+    right: 0;
+    top: 10;
+    height: 100vh;
+    z-index: -1;
+}
+
+input[type=text],
+input[type=email] {
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 270px;
+    height: 48px;
+    margin-bottom: 2.5vh;
+    margin-right: 16px;
+    background-color: var(--gray);
+    color: var(--white);
+    border: 2px solid var(--gray-light);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+}
+
+input[type=text]:hover,
+input[type=email]:hover {
+    border: 2px solid var(--gray-verylight);
+}
+
+input[type=text]:focus,
+input[type=email]:focus {
+    border: 2px solid var(--primary);
+}
+
+input[type=text]:-webkit-autofill,
+input[type=email]:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 50px var(--gray) inset;
+    -webkit-text-fill-color: var(--white);
+}
+
+.inputLabel {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+input[type=submit] {
+    box-sizing: border-box;
+    padding: 12px 20px;
+    width: 560px;
+    height: 48px;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 2.5vh;
+    cursor: ponter;
+}
+
+input[type=submit]:hover {
+    background-color: var(--primary-light);
+}
+
+input[type=submit]:focus {
+    background-color: var(--primary-verylight);
+}
+
+.checkboxContainer {
+    position: relative;
+    height: 25px;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkboxContainer input {
+    display: none;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: var(--gray);
+    border: 2px solid var(--gray-light);
+    border-radius: 5px;
+    outline: none;
+}
+
+.checkmark:hover {
+    border: 2px solid var(--gray-verylight);
+}
+
+.checkboxContainer input:checked~.checkmark {
+    background-color: var(--primary);
+    border: 2px solid var(--primary) !important;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid var(--white);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.checkboxContainer input:checked~.checkmark:after {
+    display: block;
+}
